@@ -2,14 +2,14 @@
 
 INTRODUCTION:
 
-High pore pressures within sedimentary basins and subduction zones present a significant hazard during the drilling and
-completion of wells during oil and gas exploration, geothermal energy exploration etc
+High pore pressures within sedimentary basins and subduction zones present a significant hazard during the well drilling for oil and gas exploration, geothermal energy exploration etc. The Eaton's method is used here analyse the evolution of pore pressure within a typical oil petroleum basin.
 
 Pore Pressure Analysis workflow using Eaton's Equation:
 
 --- Steps
-1. Data Cleaning and Processing
+1. Data Laoding, Cleaning and Processing
 2. Estimate the Normal compaction trend line (NCT)
+
 $$
 P_{pg}=\sigma v_{g}-\left(\sigma v_{g}-P_{hg}\right)\left(\frac{\Delta t_n}{\Delta t}\right)^m 
 $$
@@ -17,12 +17,15 @@ $$
 $$
 \Delta t_n=\Delta t_m-\left(\Delta t_{ml}-\Delta t_m\right)\,e^{-cz}
 $$
+
 3. Estimate Lithostatic Pressure
+
 $$
-\sigma v_{g}=\frac{\left(P_{sea}+\int_0^Z\rho_b(Z)\,g\,dZ\right)-P_{sea}}{Z}\label{eq:OBG_def}=\frac{\int_0^Z\rho_b(Z)\,dZ}{Z}\,g\
+\sigma v_{g}=\frac{\left(P_{sea}+\int_0^Z\rho_b(Z)\,g\,dZ\right)-P_{sea}}{Z}=\frac{\int_0^Z\rho_b(Z)\,dZ}{Z}\,g\
 $$
 
 4. Estimate Hydrostatic Pressure
+
 $$
 P_{hg}=\frac{(P_{sea}+\rho_{w}\,g\,Z)-P_{sea}}{Z}=\rho_w\,g\\
 $$
@@ -46,6 +49,7 @@ $$
 $$
 
 7. Estimate of Lithostatic Load and Pore Pressure excess ratios 
+
 $$
 \lambda^* = \frac{(P_{f} - P_{hydro})} {(P_{litho} - P_{hydro})}
 $$ 
